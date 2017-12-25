@@ -85,8 +85,8 @@ $(function() {
                     score++;
                     this.vy *= -1;
                     if (score % 3 === 0) {
-                        this.vx *= 1.2;
-                        paddle.w *= 0.9;
+                        this.vx *= 1.1;
+                        //paddle.w *= 0.9;
                     }
                     if (this.x < paddle.x - paddle.w / 2 * 1 / 3) {
                         if (this.vx > 0) {
@@ -101,6 +101,7 @@ $(function() {
             }
         }
     };
+    
     //初期化
     function init() {
         score = 0;
@@ -108,7 +109,7 @@ $(function() {
         //パドルの生成
         myPaddle = new Paddle(250, 30);
         //ボールの生成
-        myBall = new Ball(100, 100, 15, 15, 36);
+        myBall = new Ball(100, 100, 11, 11, 36);
         //scoreのラベルの生成
         scoreLabel = new Label(canvas.width / 2, canvas.height / 2 + 30);
         scoreLabel.draw(score);
